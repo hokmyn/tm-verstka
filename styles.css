@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --indent-primary: 48px;
+  --color-primary: #333;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  padding: 80px 0;  
+  margin: 0 auto;
+  background-color: #fff;
+}
+.header, .main, .footer {
+  max-width: 784px;
+  margin: 0 auto;
+  padding: var(--indent-primary);
+}
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  flex-wrap: wrap;
+}
+.header-title__suptitle {
+  margin-bottom: 12px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 2px 10px 4px;
+  background: #ffdd2d;
+}
+.header-title__main {
+  max-width: 496px;
+  margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 44px;
+  color: #111111;
+}
+.header__img {
+  width: 80px;
+  height: 80px;
+  background: #f1f3f5;
+  border-radius: 50%;
+}
+.header-tags {
+  font-size: 17px;
+  line-height: 28px;
+  color: #808c9e;
+}
+.header-tags__row:first-child {
+  margin-bottom: 8px;
+}
+.tag {
+  display: inline-block;
+  margin-right: 12px;
+  background: #f1f3f5;
+}
+.main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.content {
+  margin-bottom: var(--indent-primary);
+}
+.content-title {
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+}
+.content-text {
+  font-size: 17px;
+  line-height: 28px;
+}
+.content-text p, .tasks-list li {
+  margin-bottom: 35px;
+}
+.tasks-list li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  width: 18px;
+  height: 12px;
+  background: url("imgs/hand.svg");
+}
+.content-title_flex {
+  max-width: 374px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arrow {
+  display: inline-block;
+  width: 22px;
+  height: 10px;
+  margin: 0 8px;
+  background: url("imgs/arrow.svg");
+}
+.content-title__link {
+  display: inline-block;
+  border-bottom: 1px solid #336fee;
+  color: #597db3;
+}
+.solutions-list li {
+  margin-bottom: 16px;
+}
+.solutions-list li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  background: url("imgs/checkmark.png");
+  background-size: contain;
+}
+.sign {
+  display: flex;
+}
+.sign__img {
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+  background: url("imgs/user-female.svg") center no-repeat #f1f3f5;
+  border-radius: 50%;
+}
+.sign__text {
+  max-width: 208px;
+  font-size: 15px;
+  line-height: 20px;
+}
+.sign__text span {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 15px;
+  line-height: 20px;
+}
+.editor {
+  color: #808C9E;
+}
+.footer-link {
+  display: inline-block;
+  border-bottom: 1px solid #597db3;
+  color: #597db3;
+}
+@media (max-width: 1279px) {
+  .wrapper {
+    max-width: 768px;
+  }
+  .header, .main, .footer {
+    max-width: 688px;
+  }
+  .header-tags {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .content-title {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 28px;
+  }
+  .content-text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .content-text p, .tasks-list li {
+    margin-bottom: 20px;
+  }
+  .content-title_flex {
+    max-width: 290px;
+  }
+  .sign {
+    padding-top: 8px;
+  }
+  .footer {
+    margin-bottom: var(--indent-primary);
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+    max-width: 320px;
+    padding: 80px 16px;
+  }
+  .header, .main, .footer {
+    max-width: 288px;
+    margin: 0 auto 36px;
+    padding: 24px 24px 0;
+  }
+  .header-title__suptitle {
+    margin-bottom: 16px;
+  }
+  .header-title__main {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .header__img {
+    margin-bottom: 12px;
+  }
+  .header-tags {
+    max-width: 220px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .content {
+    margin-bottom: 36px;
+  }
+  .content-title {
+    margin-bottom: 16px;
+  }
+  .content-text p, .tasks-list li {
+    margin-bottom: 12px;
+  }
+  .content-title_flex {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .sign__text {
+    max-width: 160px;
+  }
+  .footer {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+  .editor {
+    margin-bottom: 8px;
+  }
+}
